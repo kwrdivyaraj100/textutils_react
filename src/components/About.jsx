@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function About() {
 
-    let myStyle = {
+    const [myStyle, setMyStyle] = useState({
         color: 'white',
         backgroundColor: 'black'
+    });
+
+    function toggleStyle(){
+        (myStyle.color === "white") ?
+        setMyStyle({
+            color: 'black',
+        backgroundColor: 'white'
+        }) :
+        setMyStyle({
+            color: 'white',
+        backgroundColor: 'black'
+        });
     }
+    
     return (
         <div className='container' style={myStyle}>
             <h1 className='my-3'>About Us</h1>
