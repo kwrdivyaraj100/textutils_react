@@ -14,6 +14,10 @@ function TextForm(props) {
     function handleOnChange(event){
         setText(event.target.value)
     }
+
+    function handleClearText(){
+        setText('');
+    }
   return (
     <>
     <div className='container'>
@@ -23,6 +27,7 @@ function TextForm(props) {
         </div>
         <button className='btn btn-primary' onClick={handleUpClick}>Convert to Uppercase</button>
         <button className='btn btn-primary' onClick={handleLoClick}>Convert to Lowercase</button>
+        <button className='btn btn-primary' onClick={handleClearText}>Clear Text</button>
         </div>
         <div className='container my-3'>
             <h1>Your Text Summary</h1>
