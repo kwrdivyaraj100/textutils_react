@@ -1,9 +1,15 @@
 function App() {
   return (
-    <div>
-      <h1>Hello World</h1>
-      <h2>Welcome to India..!</h2>
-    </div>
+    <>
+      <nav>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </nav>
+      <div className="container">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod in, debitis ex recusandae perferendis ipsam totam quasi delectus? Quos, nisi. Dolor sint quaerat, perferendis dignissimos recusandae quo libero quam id?</p>
+      </div>
+    </>
   );
 }
 
