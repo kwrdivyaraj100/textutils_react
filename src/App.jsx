@@ -24,7 +24,7 @@ function App() {
     } else {
       setMode('light');
       document.body.style.background = '#ffffff';
-      showAlert("Dark Mode has been Enabled", "success");
+      showAlert("Dark Mode has been Disabled", "success");
     };
   }
   return (
@@ -34,7 +34,7 @@ function App() {
       <div className="container my-3">
         <TextForm heading="Enter the text to analyze" mode={mode} showAlert={showAlert} />
       </div>
-        <About />
+      <About />
     </>
   )
 }
