@@ -6,10 +6,10 @@ function App() {
   return (
     <>
      <Navbar title = "Text Util" about = "About Text Utilities" />
-    {/* <div className="container"> */}
-      {/* <TextForm heading="Enter the text to analyze"/> */}
+    <div className="container">
+      <TextForm heading="Enter the text to analyze"/>
       <About/>
-    {/* </div> */}
+    </div>
     </>
   )
 }
