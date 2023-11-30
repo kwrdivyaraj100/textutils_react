@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 
 function App() {
   const [state, setState] = useState({
@@ -52,14 +52,15 @@ function App() {
   return (
     <>
 
-      <Navbar title="Text Util" about="About Text Utilities" mode={mode} toggleMode={toggleMode} />
+      <Navbar title="Text Util" about="About Text Utilities" darkMode={state.darkMode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
+      <TextForm heading="Enter the text to analyze below" showAlert={showAlert} />
       </div>
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<TextForm heading="Enter the text to analyze below" showAlert={showAlert} />} />
         <Route path='/about' element={<About darkMode={state.darkMode} />} />
-      </Routes>
+      </Routes> */}
 
     </>
   )
