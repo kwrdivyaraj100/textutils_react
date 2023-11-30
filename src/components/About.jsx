@@ -4,25 +4,26 @@ function About() {
 
     const [myStyle, setMyStyle] = useState({
         color: 'white',
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        btnText: 'Enable Light Mode'
     });
-
-    const [btnText, setBtnText] = useState("Enable Dark Mode")
 
     function toggleStyle() {
         if (myStyle.color === "white") {
             setMyStyle({
                 color: 'black',
-                backgroundColor: 'white'
+                backgroundColor: 'white',
+                btnText: "Enable Dark Mode"
             });
-            setBtnText("Enable Dark Mode");
+           
         }
         else {
             setMyStyle({
                 color: 'white',
-                backgroundColor: 'black'
+                backgroundColor: 'black',
+                btnText:"Enable Light Mode"
             });
-            setBtnText("Enable Light Mode");
+          
         }
     }
 
@@ -68,7 +69,7 @@ function About() {
                 </div>
             </div>
             <div className='container my-3'>
-                <button type='button' className='btn btn-primary'>Enable Dark Mode</button>
+                <button type='button' onClick={toggleStyle} className='btn btn-primary'>{myStyle.btnText}</button>
             </div>
         </div>
     )
